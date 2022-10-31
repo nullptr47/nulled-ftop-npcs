@@ -1,0 +1,12 @@
+npc:
+  type: ARMOR_STAND #MINI_ARMOR_STAND, ARMOR_STAND
+  default-skull: "nullptr47"
+
+hologram:
+  line-height: 1.2
+  lines:
+    - "&a%pos%º lugar"
+    - "&e[%tag%] %name%"
+    - "%value_k%"
+  undefined:
+    - "&7Indefinido"

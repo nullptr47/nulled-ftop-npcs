@@ -1,0 +1,5 @@
+name: nulled-ftopnpcs
+version: 1.0.0
+main: com.github.nullptr47.ftopnpcs.NpcsPlugin
+author: nullptr
+depend: [ FactionsTOP ]
