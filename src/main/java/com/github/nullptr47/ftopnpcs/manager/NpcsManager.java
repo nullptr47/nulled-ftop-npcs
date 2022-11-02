@@ -12,6 +12,7 @@ import com.massivecraft.factions.entity.Faction;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -96,10 +97,10 @@ public class NpcsManager {
 
         if (value == null) value = FactionUtils.getValue(faction);
 
-        String[] replacements = faction.isNone() ? new String[]{} :
+        String[] replacements = faction.isNone() ? ArrayUtils.toArray() :
                 new String[] {
                         "§", String.valueOf(position), faction.getTag(), faction.getName(), numberFormat(value), numberKFormat(value)
-        };
+                };
 
         hologram.setLines(configuration.getStringList("hologram." + (faction.isNone() ? "undefined" : "lines"))
                 .stream()
@@ -116,13 +117,13 @@ public class NpcsManager {
                 return 0;
 
             case 2:
-                return 2;
+                return 3;
 
             case 3:
-                return 5;
+                return 6;
 
             default:
-                return 8;
+                return 9;
 
         }
 
